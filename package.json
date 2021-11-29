@@ -1,0 +1,27 @@
+{
+  "name": "p2",
+  "version": "1.0.0",
+  "description": "Project 2 for Web Projects 1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/js/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "package",
+    "json",
+    "vue",
+    "js"
+  ],
+  "author": "Arnau Sanz, Alfonso Sarro, Pol Martinez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "check-html-links": "^0.2.3",
+    "html-minifier": "^4.0.0"
+  }
+}
