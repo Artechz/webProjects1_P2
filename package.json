@@ -4,7 +4,7 @@
   "description": "Project 2 for Web Projects 1",
   "main": "app.js",
   "scripts": {
-    "start": "node src/js/app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,7 +15,7 @@
     "vue",
     "js"
   ],
-  "author": "Arnau Sanz, Alfonso Sarro, Pol Martinez",
+  "author": "Arnau Sanz, Alfonso Sarro, Pol Navarro",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
