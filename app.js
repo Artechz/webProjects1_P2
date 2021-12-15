@@ -1,10 +1,12 @@
 const express = require('express')
 const app = express()
-const PORT = 3000
+const PORT = 8000
 
-app.use(express.static('dist'))
+const STATIC = './src/';
 
-app.listen(PORT, function (err) {
+app.use(express.static(STATIC));
+
+app.listen(PORT, (err) => {
   if (err) console.log(err)
   console.log('Server listening on PORT', PORT)
 })

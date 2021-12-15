@@ -1,7 +1,7 @@
 
 import {} from "../components/ov-hero.js"
 
-
+//TODO be able to update heroes with API (know how to get them but not how to update variable bc of Vue)
 var app = new Vue({
     el: '#appOverwatch',
     data: () => {
@@ -26,3 +26,6 @@ var app = new Vue({
     }
 })
 
+  /*    fetch('http://localhost:3000/api/list?search=')
+        .then(response => response.json())
+        .then(data => heroes = data[0]);*/
