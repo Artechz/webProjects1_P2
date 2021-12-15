@@ -1,9 +1,9 @@
-.logoDiv{
-    display: inline;
-}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+} 
 
-.titleDiv{
-    display: inline;
+.title{
+    text-align: center;
 }
 
 .footer{
@@ -11,17 +11,17 @@
 }
 
 .icon{
-    width: 100px;
-    height: 100px; /*not needed in chrome for overwatch logo to be seen properly*/
+    margin-top: 2vw;
+    margin-left: 2vw;
+    width: 5vw;
     align-items: center;
 }
 
 #mainDiv{
-    background-color: gray;
+    background-color: rgb(243, 242, 242);
 }
 
-
-.flexBox{
+.heroCardsContainer{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -35,31 +35,3 @@
     vertical-align: center;
 }
 
-.flexElement{
-    width: 500px;
-    margin: 1vw;
-    align-items: center;
-    justify-content: center;
-    vertical-align: center;
-    background-color: white;
-}
-
-.imageDiv{
-    display: inline-block;
-    vertical-align: top;
-}
-
-.textDiv{
-    display: inline-block;
-}
-
-.charImg{
-    width: 10em;
-}
-
-.moreButton{
-    width: 20px;
-    margin-left: 150px;
-    border: none;
-    background-color: white;
-}

@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/components/ov-hero.css">
     <link rel="stylesheet" href="css/pages/index.css">
     <!--css for components missing (example had one for pokedata and one for pokebutton)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/pages/index.js" type="module"></script>
-    <title>Overwatch</title>
+    <title>Overwatch Hero Directory</title>
 </head>
 <body>
     <header>
-        <div class="logoDiv"><object type="image/svg+xml" data="media/img/Blizzard_Entertainment_Logo_2015.svg" class="icon"></object></div>
-        <div class="titleDiv"><h1>Page Title</h1></div>
+        <img src="media/img/PikPng.com_overwatch-logo-png_1032278.png" alt="OverwatchLogo" class="icon">
+        <h1 class="title">Overwatch Hero Directory</h1>
     </header>
     <main id="mainDiv">
 
-        <div id="appOverwatch" class="flexBox">
+        <div id="appOverwatch" class="heroCardsContainer">
             <div id="search">
                 <form>
                     <button>Search</button>
@@ -25,13 +26,13 @@
                 </form>
             </div>
             
-
             <ov-hero
                 v-for="hero in heroes"
                 v-bind:data="hero"
                 v-bind:key="hero.key"
             ></ov-hero>
 
+            <!--
             <div class="flexElement">
                 <div class="imageDiv">
                     <img class="charImg" src="https://static.wikia.nocookie.net/overwatch_gamepedia/images/a/a0/Hanzo-portrait.png/revision/latest?cb=20160620014349" alt="Hanzo">
@@ -43,6 +44,7 @@
                     <input type="image" src="https://www.pinclipart.com/picdir/big/43-437827_plus-clipart.png" class="moreButton" alt="+">
                 </div>
             </div>
+            
 
             <div class="flexElement">
                 <div class="imageDiv">
@@ -52,9 +54,16 @@
                     <p id="name2">Mercy</p>
                     <p id="age2">Age: 37</p>
                     <p id="occupation2">Occupation: Field Medic</p>
-                    <input type="image" src="https://www.pinclipart.com/picdir/big/43-437827_plus-clipart.png" class="moreButton" alt="+">
+                    
+                    <details class="hideArrow">
+                        <summary><img class="moreButton" src="https://www.pinclipart.com/picdir/big/43-437827_plus-clipart.png" alt="More information"></summary>
+                        <div>
+                            <p>Mercy’s Valkyrie Suit helps keep her close to teammates like a guardian angel; healing, resurrecting or strengthening them with the beams emanating from her Caduceus Staf</p>
+                        </div>
+                    </details>
                 </div>
             </div>
+            -->
 
         </div>
     </main>
