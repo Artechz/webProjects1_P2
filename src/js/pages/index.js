@@ -23,6 +23,13 @@ var app = new Vue({
                 }
             ]
         }
+    },
+    created: () => {
+        //let self = this
+        fetch('http://localhost:3000/api/list?search=')
+        .then(response => response.json())
+        .then(data => app.heroes = data)
+        .then(console.log("API request successful"));
     }
 })
 
