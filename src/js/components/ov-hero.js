@@ -21,12 +21,15 @@ Vue.component('ov-hero', {
       moreInfo() {
         fetch('http://localhost:3000/api/detail', {
           method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify(this.data)
         })
         .then(response => response.json())
-        .then(data => this.data.message = data.message)
-        .then(console.log("API request successful"));
-
+        .then(data => this.data.message = data[0].message)
+        .then(console.log(`API call successful: POST detail request for "${this.data.key}"`))
+        .catch(error => console.error('Error:', error));
         this.showingMore = !this.showingMore;
       }
     },
