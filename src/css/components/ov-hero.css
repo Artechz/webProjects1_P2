@@ -16,10 +16,10 @@
 }
 
 .spin {
-    animation:spin 2s linear;
+    animation:spin 1s linear;
 }
 
-@keyframes spin { 100% {transform:rotate(1080deg);} }
+@keyframes spin { 100% {transform:rotate(360deg);} }
 
 .heroCard{
     width: 50vw;

@@ -31,14 +31,18 @@ var app = new Vue({
     }
 })
 
-//FIXME: stopped working at some point
+//FIXME: stopped working at some point 
+/*
 document.addEventListener('DOMContentLoaded', () => {
-    let myButtons=document.querySelectorAll('.moreButton');
-
-    myButtons.forEach((button) => {  
+    let moreInfoButtons = document.querySelectorAll('.moreButton');
+    let counter = 0;
+    moreInfoButtons.forEach((button) => {  
         button.addEventListener('click', () => {
-            myButtons.forEach(b => b.classList.remove('spin'));
+            moreInfoButtons.forEach(b => b.classList.remove('spin'));
             button.classList.add('spin');
+            
         });  
+        counter++;
     }); 
-});
+    console.log(`Found ${counter} moreInfo buttons.`);
+});*/
