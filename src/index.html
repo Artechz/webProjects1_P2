@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/components/search-form.css">
     <link rel="stylesheet" href="css/components/ov-hero.css">
     <link rel="stylesheet" href="css/pages/index.css">
-    <!--css for components missing (example had one for pokedata and one for pokebutton)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="js/pages/index.js" type="module"></script>
@@ -19,51 +19,18 @@
     <main id="mainDiv">
 
         <div id="appOverwatch" class="heroCardsContainer">
-            <div id="search">
+            <search-form id="search">
                 <form>
                     <button>Search</button>
                     <input type="text" name="key">
                 </form>
-            </div>
+            </search-form>
             
             <ov-hero
                 v-for="hero in heroes"
                 v-bind:data="hero"
-                v-bind:key="hero.key"
-            ></ov-hero>
-
-            <!--
-            <div class="flexElement">
-                <div class="imageDiv">
-                    <img class="charImg" src="https://static.wikia.nocookie.net/overwatch_gamepedia/images/a/a0/Hanzo-portrait.png/revision/latest?cb=20160620014349" alt="Hanzo">
-                </div>
-                <div class="textDiv">
-                    <p id="name1">Hanzo</p>
-                    <p id="age1">Age: 38</p>
-                    <p id="occupation1">Occupation: Mercenary</p>
-                    <input type="image" src="https://www.pinclipart.com/picdir/big/43-437827_plus-clipart.png" class="moreButton" alt="+">
-                </div>
-            </div>
-            
-
-            <div class="flexElement">
-                <div class="imageDiv">
-                    <img class="charImg" src="https://static.wikia.nocookie.net/overwatch_gamepedia/images/d/d2/Mercy-portrait.png/revision/latest?cb=20160620024553" alt="Mercy">
-                </div>
-                <div class="textDiv">
-                    <p id="name2">Mercy</p>
-                    <p id="age2">Age: 37</p>
-                    <p id="occupation2">Occupation: Field Medic</p>
-                    
-                    <details class="hideArrow">
-                        <summary><img class="moreButton" src="https://www.pinclipart.com/picdir/big/43-437827_plus-clipart.png" alt="More information"></summary>
-                        <div>
-                            <p>Mercy’s Valkyrie Suit helps keep her close to teammates like a guardian angel; healing, resurrecting or strengthening them with the beams emanating from her Caduceus Staf</p>
-                        </div>
-                    </details>
-                </div>
-            </div>
-            -->
+                v-bind:key="hero.key">
+            </ov-hero>
 
         </div>
     </main>

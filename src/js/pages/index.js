@@ -1,6 +1,6 @@
+import {} from "../components/search-form.js"
 import {} from "../components/ov-hero.js"
 
-//TODO be able to update heroes with API (know how to get them but not how to update variable bc of Vue)
 var app = new Vue({
     el: '#appOverwatch',
     data: () => {
@@ -24,7 +24,6 @@ var app = new Vue({
         }
     },
     created: () => {
-        //let self = this
         fetch('http://localhost:3000/api/list?search=')
         .then(response => response.json())
         .then(data => app.heroes = data)
@@ -32,17 +31,14 @@ var app = new Vue({
     }
 })
 
-  /*    fetch('http://localhost:3000/api/list?search=')
-        .then(response => response.json())
-        .then(data => heroes = data[0]);*/
-
+//FIXME: stopped working at some point
 document.addEventListener('DOMContentLoaded', () => {
-    let myBtns=document.querySelectorAll('.moreButton');
+    let myButtons=document.querySelectorAll('.moreButton');
 
-    myBtns.forEach((btn) => {  
-        btn.addEventListener('click', () => {
-            myBtns.forEach(b => b.classList.remove('spin'));
-            btn.classList.add('spin');
+    myButtons.forEach((button) => {  
+        button.addEventListener('click', () => {
+            myButtons.forEach(b => b.classList.remove('spin'));
+            button.classList.add('spin');
         });  
     }); 
 });
